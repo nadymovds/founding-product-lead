@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
-  <title id="title">DN favicon</title>
-  <desc id="desc">Rounded blue tile with a minimal DN monogram.</desc>
+  <title id="title">Compass favicon</title>
+  <desc id="desc">Rounded blue tile with a centered compass emoji.</desc>
   <defs>
     <linearGradient id="bg" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#1d4ed8" />
@@ -8,6 +8,5 @@
     </linearGradient>
   </defs>
   <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#bg)" />
-  <path d="M20 18h10.5c8.2 0 13 5.2 13 14s-4.8 14-13 14H20V18Zm9.7 22.1c4.6 0 7.4-2.7 7.4-8.1s-2.8-8.1-7.4-8.1h-3.6v16.2h3.6Z" fill="#f8fbff"/>
-  <path d="M44 46V18h5.6l8.4 16.2V18H64v28h-5.4l-8.6-16.3V46H44Z" fill="#dbe7ff" transform="translate(-10 0) scale(.92 1)"/>
+  <text x="32" y="33" text-anchor="middle" dominant-baseline="middle" font-size="31">🧭</text>
 </svg>
