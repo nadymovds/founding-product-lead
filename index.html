@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Denis Nadymov — Founding Product Lead / AI Product Manager</title>
+  <meta name="description" content="Denis Nadymov — Founding Product Lead / AI Product Manager focused on 0→1 EdTech products, MVP validation, AI workflows, automation and growth." />
+  <meta property="og:title" content="Denis Nadymov — Founding Product Lead / AI Product Manager" />
+  <meta property="og:description" content="0→1 EdTech Products | MVP Validation | AI Workflows | Automation & Growth" />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --paper: #ffffff;
+      --text: #1f2933;
+      --muted: #5f6c7b;
+      --line: #e5e1d8;
+      --accent: #1d4ed8;
+      --accent-dark: #163a75;
+      --tag-bg: #eef3ff;
+      --tag-text: #24427a;
+      --shadow: 0 18px 45px rgba(31, 41, 51, 0.08);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at top left, #eef3ff 0, transparent 32rem), var(--bg);
+      line-height: 1.58;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--accent-dark);
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 40px 20px 72px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 28px;
+      align-items: stretch;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 38px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(36px, 7vw, 64px);
+      line-height: 0.96;
+      letter-spacing: -0.055em;
+    }
+
+    .headline {
+      margin: 0 0 22px;
+      font-size: clamp(19px, 3vw, 27px);
+      line-height: 1.2;
+      color: var(--accent-dark);
+      font-weight: 750;
+      letter-spacing: -0.025em;
+    }
+
+    .summary {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 16.5px;
+    }
+
+    .hero-side {
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 15px;
+    }
+
+    .contact-label {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+      margin-bottom: 2px;
+    }
+
+    .actions {
+      display: grid;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 44px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #fff;
+      font-weight: 750;
+      text-align: center;
+      transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+    }
+
+    .button:hover {
+      color: #fff;
+      background: var(--accent-dark);
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(29, 78, 216, 0.22);
+    }
+
+    .button.secondary {
+      background: #fff;
+      color: var(--accent);
+    }
+
+    .button.secondary:hover {
+      color: var(--accent-dark);
+      background: #f8fbff;
+    }
+
+    .section {
+      margin-top: 22px;
+      padding: 32px 34px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    .section-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .skill-box {
+      padding: 16px;
+      border-radius: 16px;
+      background: #fbfaf7;
+      border: 1px solid var(--line);
+    }
+
+    .skill-box h3 {
+      margin: 0 0 6px;
+      font-size: 14px;
+      color: var(--accent-dark);
+      letter-spacing: -0.01em;
+    }
+
+    .skill-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    .experience {
+      display: grid;
+      gap: 24px;
+    }
+
+    .role {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .role:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .role-meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .date {
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .company-context {
+      font-style: italic;
+    }
+
+    .role h3 {
+      margin: 0 0 5px;
+      font-size: 18px;
+      line-height: 1.28;
+      letter-spacing: -0.015em;
+    }
+
+    .role-title {
+      color: var(--accent-dark);
+      font-weight: 800;
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-left: 19px;
+    }
+
+    li {
+      margin: 6px 0;
+      color: var(--muted);
+    }
+
+    li strong {
+      color: var(--text);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .project-card {
+      padding: 16px;
+      border-radius: 16px;
+      background: #fbfaf7;
+      border: 1px solid var(--line);
+    }
+
+    .project-card h4 {
+      margin: 0 0 6px;
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    .compact-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .compact-block h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: var(--accent-dark);
+    }
+
+    .compact-block p {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 14.5px;
+    }
+
+    .footer {
+      margin-top: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 820px) {
+      .hero,
+      .role,
+      .skills-grid,
+      .projects,
+      .compact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page {
+        padding: 20px 14px 48px;
+      }
+
+      .hero-main,
+      .hero-side,
+      .section {
+        padding: 24px;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .section-note {
+        margin-top: 6px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        max-width: none;
+        padding: 0;
+      }
+
+      .card {
+        box-shadow: none;
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .button,
+      .actions {
+        display: none;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .section {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="hero-main card">
+        <div class="eyebrow">Available for Founding Product / AI Product roles</div>
+        <h1>Denis Nadymov</h1>
+        <p class="headline">Founding Product Lead / AI Product Manager</p>
+        <p class="summary">
+          0→1 product builder focused on EdTech, MVP validation, AI workflows, automation and growth. I work best in ambiguous early-stage environments where the goal is to validate a hypothesis, turn a manual MVP into repeatable product flows, and drive measurable product or business outcomes.
+        </p>
+      </div>
+
+      <aside class="hero-side card">
+        <ul class="contact-list">
+          <li><span class="contact-label">Location</span>Tampere</li>
+          <li><span class="contact-label">Email</span><a href="mailto:nadymov.ds@gmail.com">nadymov.ds@gmail.com</a></li>
+          <li><span class="contact-label">Phone</span><a href="tel:+358415886381">+358 41 588 6381</a></li>
+          <li><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/denisnadymov-0a8088215/" target="_blank" rel="noreferrer">linkedin.com/in/denisnadymov</a></li>
+          <li><span class="contact-label">Products</span><a href="https://scribeit.tech" target="_blank" rel="noreferrer">scribeit.tech</a> · <a href="https://dia-log.scribeit.tech" target="_blank" rel="noreferrer">dia-log.scribeit.tech</a></li>
+        </ul>
+        <div class="actions">
+          <a class="button" href="mailto:nadymov.ds@gmail.com?subject=Founding%20Product%20Lead%20opportunity">Contact me</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/denisnadymov-0a8088215/" target="_blank" rel="noreferrer">View LinkedIn</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section card">
+      <div class="section-header">
+        <h2>Profile</h2>
+        <p class="section-note">AI-native product leadership for 0→1 and early growth</p>
+      </div>
+      <p>
+        I co-founded <strong>Scribeit.tech</strong>, an AI-driven EdTech product, taking it from discovery and 70+ customer interviews to an international MVP, early users, SEO growth, positioning pivots, and LLM-powered content automation. Currently, I work directly with the founder at <strong>SKAI</strong> on discovery, growth, AI workflows, automation, and new product initiatives.
+      </p>
+      <p>
+        I do not stop at research or specifications: when speed matters, I build prototypes, internal tools, workflow automation, data-backed systems, and working MVPs myself before scaling engineering investment.
+      </p>
+    </section>
+
+    <section class="section card">
+      <div class="section-header">
+        <h2>Core Skills</h2>
+        <p class="section-note">Product, AI, automation and execution</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-box">
+          <h3>Product</h3>
+          <p>0→1 product development, MVP validation, discovery, strategy, hypothesis testing, positioning, go-to-market experiments, roadmap ownership.</p>
+        </div>
+        <div class="skill-box">
+          <h3>Growth & Metrics</h3>
+          <p>Funnel analysis, conversion improvement, SEO growth, lead generation, product metrics, metrics trees, evidence-based prioritization.</p>
+        </div>
+        <div class="skill-box">
+          <h3>AI & Automation</h3>
+          <p>LLM workflows, AI-assisted development, market intelligence automation, customer insight extraction, content automation, internal tools.</p>
+        </div>
+        <div class="skill-box">
+          <h3>Execution</h3>
+          <p>Founder / CEO collaboration, cross-functional leadership, stakeholder management, product launch, OKRs, Agile / Scrum, mentoring.</p>
+        </div>
+        <div class="skill-box">
+          <h3>Technical Fluency</h3>
+          <p>Notion, Airtable, Figma, spreadsheets, API-based workflows, database-backed automation, structured data models, AI-assisted prototyping.</p>
+        </div>
+        <div class="skill-box">
+          <h3>Best Fit</h3>
+          <p>Early-stage products where product, growth, operations, AI and business validation overlap.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <div class="section-header">
+        <h2>Experience</h2>
+        <p class="section-note">Selected achievements</p>
+      </div>
+
+      <div class="experience">
+        <article class="role">
+          <div class="role-meta">
+            <div class="date">May 2024 – Present</div>
+            <div class="company-context">Intelligent monitoring and video analytics systems for corporate car fleets</div>
+          </div>
+          <div>
+            <h3><span class="role-title">Product Manager — Discovery, Growth & AI Automation</span> | SKAI</h3>
+            <ul>
+              <li>Work directly with the founder on product direction, customer discovery, growth opportunities, AI workflows, and new product initiatives.</li>
+              <li>Built a repeatable discovery and prioritization process across <strong>25+ studies</strong>, reducing validation cycle time from <strong>3 months to 6 weeks</strong>.</li>
+              <li>Improved lead-to-deal conversion from <strong>1.6% to 3%</strong> by translating customer research into sharper positioning, marketing materials, sales narratives, and sales enablement.</li>
+              <li>Created an AI-powered market intelligence workflow that increased competitor and industry signal coverage used in product planning by <strong>20x</strong> without additional research cost.</li>
+              <li>Built automation tools for meeting insights and personalized outreach, including an official-letter tool that increased event lead acquisition by <strong>15%</strong>.</li>
+              <li>Initiated and launched an internal employee-facing product, with a roadmap to evolve it into a public-facing tool for lead generation and partner loyalty.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="role-meta">
+            <div class="date">Nov 2025 – Present</div>
+            <div class="company-context">Hands-on MVPs and automation tools built outside full-time work</div>
+          </div>
+          <div>
+            <h3><span class="role-title">Independent Product Experiments & AI Prototypes</span></h3>
+            <div class="projects">
+              <div class="project-card">
+                <h4>Dia-Log — Diabetes Management PWA</h4>
+                <p>Built a working PWA prototype for Type 1 diabetes meal logging and insulin-dose support, reducing meal logging time by <strong>4x</strong> in early user testing. Turned a manual workflow into a structured product flow with offline mode, auto-sync and cross-device access.</p>
+              </div>
+              <div class="project-card">
+                <h4>Vierasjoukkue Football Club Operations Platform</h4>
+                <p>Built a platform combining official match statistics, attendance planning, calendar reminders and stats-driven content automation. Eliminated manual statistics updates via official API integration.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="role-meta">
+            <div class="date">Mar 2023 – Oct 2025</div>
+            <div class="company-context">AI-driven EdTech platform for structured lecture notes and memory boosters</div>
+          </div>
+          <div>
+            <h3><span class="role-title">Product Manager & Co-founder</span> | Scribeit.tech</h3>
+            <ul>
+              <li>Co-founded and owned 0→1 development of an AI EdTech product, from discovery and market research to MVP launch, early users, positioning, and growth experiments.</li>
+              <li>Conducted <strong>70+ customer and market interviews</strong> across 3 segments to validate the riskiest assumptions before product build.</li>
+              <li>Turned a manual MVP workflow for transforming online lessons into structured learning materials into an automated LLM-powered content pipeline.</li>
+              <li>Launched an international MVP and attracted <strong>50+ early users</strong> through organic acquisition channels.</li>
+              <li>Improved organic search performance: average search position from <strong>25 to 5</strong> and CTR from <strong>1.3% to 3.1%</strong>.</li>
+              <li>Secured external validation through Business Finland business plan approval, 2 acceleration programs, and 2 partner letters of intent.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="role-meta">
+            <div class="date">Nov 2021 – May 2023</div>
+            <div class="company-context">Large enterprise bank, 15M+ retail and corporate clients</div>
+          </div>
+          <div>
+            <h3><span class="role-title">Head of Internal Product Owners School</span> | VTB Bank</h3>
+            <ul>
+              <li>Built and scaled an internal Product Owners School covering discovery, metrics, prioritization, agile delivery, and product decision-making.</li>
+              <li>Designed and launched a training bot-simulator that helped Product Owners practice product thinking and decision-making scenarios.</li>
+              <li>Increased participant reach per team member by <strong>3x</strong> while improving program satisfaction from <strong>4.1 to 4.5</strong>.</li>
+              <li>Doubled graduation rate from <strong>30% to 70%</strong> and mentored Product Owners across multiple teams.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="role-meta">
+            <div class="date">Jun 2020 – Oct 2021</div>
+            <div class="company-context">Major telecom operator and digital ecosystem, 80M+ subscribers</div>
+          </div>
+          <div>
+            <h3><span class="role-title">Product Transformation Lead / Product Coach</span> | MTS</h3>
+            <ul>
+              <li>Helped transform a 120+ person product stream from output-based delivery to outcome-driven product management.</li>
+              <li>Reduced cycle time from <strong>3 months to 3 weeks</strong> by introducing continuous discovery, business reviews, and tighter planning cadence.</li>
+              <li>Designed a product metrics tree and introduced team-based OKRs to connect product decisions with business outcomes.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role">
+          <div class="role-meta">
+            <div class="date">Jun 2017 – Jun 2020</div>
+            <div class="company-context">Fuel station network, 1,400+ stations</div>
+          </div>
+          <div>
+            <h3><span class="role-title">Business Analyst & Scrum Master</span> | Gazprom Neft</h3>
+            <ul>
+              <li>Helped launch and scale <strong>10+ digital services</strong>, increasing monthly revenue <strong>6x</strong> and making the product the company’s most profitable B2C digital service.</li>
+              <li>Implemented end-to-end analytics across <strong>10+ services</strong>, enabling data-driven product and business decisions.</li>
+              <li>Reduced time-to-market by <strong>20–110%</strong> across teams and supported the launch of <strong>5+ new product teams</strong>.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section card">
+      <div class="section-header">
+        <h2>Education & Certifications</h2>
+      </div>
+      <div class="compact-grid">
+        <div class="compact-block">
+          <h3>Education</h3>
+          <p><strong>PhD in Economics</strong> — St. Petersburg Mining University, 2015</p>
+          <p><strong>Specialist Degree in Enterprise Economics</strong> — St. Petersburg State University of Architecture and Civil Engineering, 2012</p>
+        </div>
+        <div class="compact-block">
+          <h3>Certifications</h3>
+          <p>Advanced JTBD — How to Make a Product, 2024</p>
+          <p>Product Analytics Simulator — GoPractice, 2021</p>
+          <p>LeSS Practitioner, 2019 · Professional Scrum Master I, 2018</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section card">
+      <div class="section-header">
+        <h2>Additional</h2>
+      </div>
+      <p>
+        Public speaking, facilitation, product training, and mentoring experience. Experience working with international products, distributed teams, and English-language product documentation.
+      </p>
+    </section>
+
+    <p class="footer">© Denis Nadymov · Founding Product Lead / AI Product Manager</p>
+  </main>
+</body>
+</html>
